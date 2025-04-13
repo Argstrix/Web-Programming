@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2-23BCE1087</title>
+</head>
+<body style="font-family: Courier New, Courier, monospace;">
+    <form>
+        
+        <fieldset>
+            <Legend style="color: red;">Personal details</Legend>
+            <br>
+            <label for="name">Name:&ensp;&ensp;&ensp;&ensp;</label>
+            <input type = "text" name = "name" id = "name"> <br><br>
+            <label for="Password">Password:&ensp;&ensp;&ensp;&ensp;</label>
+            <input type="password" name = "Password" id ="Password"> <br><br>
+            <label for="email">Email-Id:&ensp;&ensp;&ensp;&ensp;</label>
+            <input type="email" name="email" id="email">        <br><br>
+            <label for="gender">Gender:&ensp;&ensp;&ensp;&ensp;</label>
+            <input type="radio" name="gender" id="male"> male 
+            <input type="radio" name="gender" id="female"> female <br><br>
+            <label for="DOB">DOB:&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</label>
+            <input type="date" name="DOB" id="DOB"> <br><br>
+            <label for="Mobile">Mobile#:&ensp;&ensp;&ensp;&ensp;</label>
+            <input type="tel" name="Mobile" id="Mobile" pattern="[0-9]{10}"> <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend  style="color: red;">Educational Qualification</legend> <br>
+            <label for="Degree"> Degree:  </label>
+            <Select>
+                <option selected>--select group--</option>
+                <optgroup label = "UG" >
+                    <option value="BE">BE</option>
+                    <option value="BTech">BTECH</option>
+                    <option value="BSc">Bsc</option>
+                    <option value="BA">BA</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BBA">BBA</option>
+                </optgroup>
+                <optgroup label = "PG">
+                    <option value="ME">ME</option>
+                    <option value="MTech">MTech</option>
+                    <option value="MSc">MSc</option>
+                    <option value="MA">MA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="MBA">MBA</option>
+                </optgroup>
+                <optgroup label = "PhD">
+                    <option value="Engineering">Engineering</option>
+                    <option value="Science">Science</option>
+                    <option value="Management">Management</option>
+                    
+                </optgroup>
+                <optgroup label = "Other">
+                    <option value="Other">Other</option>
+                </optgroup>
+            </Select>
+            
+            <label for="Degree">&ensp;Engineering: </label>
+            <select>
+                <optgroup>
+                    <option selected>--select group--</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="MECH">MECH</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <label for="Hobbies">Hobbies: </label>
+            <input type="checkbox" name="chess" id="chess"> Playing  chess
+            <input type="checkbox" name="book" id="book"> Reading Books
+            <br><br>
+
+            <label for="Color">Favourite color: </label>
+            <input type="color" name="Color" id="color">
+
+            
+            
+        </fieldset>
+
+        <label for="Address" style="color:red"> Address </label> <br>
+        <textarea name="Address" id="Add" cols="150" rows="15"></textarea>
+        <br>
+
+    
+        <label for="File">Attach Resume: </label>
+        &emsp;
+        <input type="file" name="File" id="resume"> 
+
+        <input type = "submit" value = "Submit">
+    </form>
+</body>
+</html>

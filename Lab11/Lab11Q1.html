@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23BCE1087</title>
+</head>
+<body>
+    <div id = "TableOut"></div><br>
+    <div id = "Button"></div><br>
+    <div id = "Textbox1"></div><br>
+    <div id = "AddMore"></div><br>
+    <div id = "CountDisplay"></div><br>
+
+    <script>
+        //(i)
+        let table = document.createElement("table");
+        table.border = "1";
+        for(let i = 0;i<3;i++){
+            let row = table.insertRow();
+            for(let j = 0;j<3;j++){
+                let cell = row.insertCell();
+                cell.innerHTML = `Index : ${i+1}${j+1}`;
+            }
+        }
+        table.style.width = "40vh";
+        table.style.height= "40vh";
+        table.style.fontWeight= "bold";
+        table.style.fontSize = "20px";
+        table.style.textAlign = "Center"
+        document.getElementById("TableOut").appendChild(table);
+
+        //(ii)
+        let button = document.createElement("button");
+        button.innerText = "Hover here";
+        button.style.backgroundColor="red";
+        button.style.width = "100px";
+        button.style.height = "70px";
+        button.style.transition = "background-color 0.3s ease-in"
+        button.addEventListener("mouseover",()=>button.style.backgroundColor="green");
+        button.addEventListener("mouseout",()=>button.style.backgroundColor="red");
+        document.getElementById("Button").appendChild(button);
+
+        //(iii)
+        let input1 = document.createElement("input");
+        input1.type = "text"
+        input1.style.backgroundColor="green";
+        input1.addEventListener("focus",()=>{
+            input1.style.backgroundColor="yellow";
+        });
+        input1.addEventListener("change",()=>{
+            input1.value = "Changed.";
+        })
+        document.getElementById("Textbox1").appendChild(input1);
+
+        //(iv)
+        let inputField = document.createElement("input");
+        let addButton = document.createElement("button");
+        addButton.textContent = "Add Item";
+        let  ul = document.createElement("ul");
+        addButton.addEventListener("dblclick", function() {
+            if (inputField.value.trim() !== "") {
+                let li = document.createElement("li");
+                li.textContent = inputField.value;
+                ul.appendChild(li);
+                inputField.value = "";
+            }
+        });
+        document.getElementById("AddMore").appendChild(inputField);
+        document.getElementById("AddMore").appendChild(addButton);
+        document.getElementById("AddMore").appendChild(ul);
+
+        //(v)
+        let input2 = document.createElement("input");
+        let countInput = document.createElement("input");
+        countInput.readOnly = true;
+        let count = 0;
+        input2.addEventListener("keydown",()=>{
+            count++;
+            countInput.value = count;
+        })
+        document.getElementById("CountDisplay").append(input2);
+        document.getElementById("CountDisplay").append(document.createElement("br"))
+        document.getElementById("CountDisplay").append(countInput);
+    </script>
+</body>
+</html>

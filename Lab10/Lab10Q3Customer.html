@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23BCE1087</title>
+    <link rel="stylesheet" href="Lab10Q3.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Grocery Order Form</h2>
+        <form id="orderForm">
+            <label>Customer Name</label>
+            <div id = "name">
+                <input type="text" id="Firstname" required>
+                <div id = "spacer"></div>
+                <input type="text" id="Lastname" required>
+            </div>
+            <label>Phone Number</label>
+            <input type="text" id="phone" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <h3>Products</h3>
+            <div class="product">
+                <input type="checkbox" class="item" value="Apple" data-price="10">
+                <img src="https://w7.pngwing.com/pngs/399/447/png-transparent-red-apple-illustration-juice-apple-fruit-graphy-red-apple-natural-foods-food-leaf-thumbnail.png" alt="Apple">
+                <span>Apple - $10/kg</span>
+                <input type="number" class="qty" min="1" max="10">
+            </div>
+
+            <div class="product">
+                <input type="checkbox" class="item" value="Banana" data-price="5">
+                <img src="https://w7.pngwing.com/pngs/955/492/png-transparent-banana-powder-fruit-cavendish-banana-banana-yellow-banana-fruit-food-image-file-formats-banana-leaves-thumbnail.png" alt="Banana">
+                <span>Banana - $5/kg</span>
+                <input type="number" class="qty" min="1" max="10">
+            </div>
+
+            <div class="product">
+                <input type="checkbox" class="item" value="Avocado" data-price="7">
+                <img src="https://w7.pngwing.com/pngs/455/522/png-transparent-slice-avocado-fruit-avocado-avocado-food-photography-desktop-wallpaper-thumbnail.png" alt="Avocado">
+                <span>Avocado - $7/kg</span>
+                <input type="number" class="qty" min="1" max="10">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="Lab10Q3.js"></script>
+</body>
+</html>

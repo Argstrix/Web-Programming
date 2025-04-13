@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>23BCE1087</title>
+        <style>
+            body {
+                display: flex;
+            }
+            .Form-container {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #Time {
+                position: relative;
+                border: 1px solid black;
+                width: 150px;
+                height: fit-content;
+                padding: 8px;
+                margin: 4px;
+                align-items: center;
+            }
+            #spacer {
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Form-container">
+            <div id="header">
+                <h1>Test JavaScript Form Validation</h1>
+                <div id="spacer"></div>
+                <div id="Time">Time:</div>
+            </div>
+            <form id="Test">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name*</td>
+                            <td>
+                                <input type="text" id="name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>
+                                <input type="text" id="Address" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zip Code*</td>
+                            <td>
+                                <input type="number" id="Zip" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Country*</td>
+                            <td>
+                                <select id="Country" name="country">
+                                    <option selected disabled>
+                                        Please select..
+                                    </option>
+                                    <option>India</option>
+                                    <option>Afganistan</option>
+                                    <option>England</option>
+                                    <option>Australia</option>
+                                    <option>New Zealand</option>
+                                    <option>South Africa</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gender*</td>
+                            <td>
+                                <input type="radio" name="gender" id="male" />
+                                Male
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    id="female"
+                                />Female
+                            </td>
+                            <td>Pan No:</td>
+                            <td>
+                                <input type="text" name="Pan" id="pan" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Prefrences*</td>
+                            <td>
+                                <input type="checkbox" name="Color" id="Red" />
+                                Red
+                                <input
+                                    type="checkbox"
+                                    name="Color"
+                                    id="Green"
+                                />
+                                Green
+                                <input type="checkbox" name="Color" id="Blue" />
+                                Blue
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phone*</td>
+                            <td>
+                                <input type="tel" id="Phone" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email*</td>
+                            <td>
+                                <input type="email" id="Email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password (6-8 characters)*</td>
+                            <td>
+                                <input type="password" id="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Verify password*</td>
+                            <td>
+                                <input type="password" id="verifyPass" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="submit">SEND</button>
+                                <button type="reset">CLEAR</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <script src="Lab11Q3.js"></script>
+    </body>
+</html>

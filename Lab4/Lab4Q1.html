@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1-23BCE1087</title>
+</head>
+<body>
+    <form>
+    <fieldset value = "Login">
+        <legend>Login</legend>
+        <label for="Username">Username*</label><br>
+        <input type="text"><br>
+        <label for="Password">Password*</label><br>
+        <input type="password">
+    </fieldset>
+    <fieldset>
+        <legend>Gender*</legend>
+        <input type="radio" name = "gender" id = "male"> Male
+        <input type="radio" name = "gender" id = "female"> Female
+    </fieldset>
+    <fieldset>
+        <legend>Programming Skill</legend>
+        <input type="checkbox" name="prog" id ="Java"> Java
+        <input type="checkbox" name="prog" id = "C++" checked> C++
+        <input type="checkbox" name="prog" id = "C#"> C#
+    </fieldset>
+    <fieldset>
+        <legend>Fruit</legend>
+        <label for = Fruit>Choose A Fruit: </label>
+        <select id="fruits" name="fruits">
+            <optgroup label="Pome">
+                <option value="apple">Apple</option>
+                <option value="pear">Pear</option>
+            </optgroup>
+            <optgroup label="Citrus">
+                <option value="orange">Orange</option>
+                <option value="grapefruit">Grapefruit</option>
+                <option value="mandarin">Mandarin</option>
+                <option value="lime">Lime</option>
+            </optgroup>
+            <optgroup label="Stone">
+                <option value="nectarine">Nectarine</option>
+                <option value="apricot">Apricot</option>
+                <option value="peach">Peach</option>
+                <option value="plum">Plum</option>
+            </optgroup>
+            <optgroup label="Exotic">
+                <option value="banana" selected>Banana</option>
+                <option value="mango">Mango</option>
+            </optgroup>
+            <optgroup label="Berries">
+                <option value="strawberry">Strawberry</option>
+                <option value="raspberry">Raspberry</option>
+                <option value="blueberry">Blueberry</option>
+                <option value="kiwifruit">Kiwifruit</option>
+                <option value="passionfruit">Passionfruit</option>
+            </optgroup>
+            <optgroup label="Melons">
+                <option value="watermelon">Watermelon</option>
+                <option value="rockmelon">Rock-melon</option>
+                <option value="honeydew">Honeydew melon</option>
+            </optgroup>
+        </select>
+    </fieldset>
+    <fieldset>
+        <textarea rows="7" cols = "40">Enter your comment here</textarea>
+        <br>
+        <button value="Send">SEND</button>
+        <button value="Reset">RESET</button>
+    </fieldset>
+    
+    </form>
+</body>
+</html>

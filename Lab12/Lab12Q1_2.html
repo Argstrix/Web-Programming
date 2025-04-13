@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>23BCE1087</title>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="800" height="600"></canvas>
+
+        <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+
+            //  Pond (Oval)
+            ctx.beginPath();
+            ctx.ellipse(400, 300, 150, 100, 0, 0, Math.PI * 2);
+            ctx.fillStyle = "lightblue";
+            ctx.fill();
+            ctx.stroke();
+
+            //  Boat
+            ctx.beginPath();
+            ctx.moveTo(350, 270);
+            ctx.lineTo(440, 270);
+            ctx.lineTo(420, 290);
+            ctx.lineTo(370, 290);
+            ctx.closePath();
+            ctx.fillStyle = "brown";
+            ctx.fill();
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+
+            // Start animation
+
+            // Duck
+            // Duck Body (Ellipse)
+            ctx.beginPath();
+            ctx.ellipse(600, 420, 40, 30, 0, 0, Math.PI * 2);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.stroke();
+
+            // Duck Head (Circle)
+            ctx.beginPath();
+            ctx.arc(630, 400, 20, 0, Math.PI * 2);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.stroke();
+            //eye
+            ctx.beginPath();
+            ctx.arc(635, 395, 5, 0, Math.PI * 2);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.stroke();
+
+            //beak
+            ctx.beginPath();
+            ctx.moveTo(650, 400);
+            ctx.fillStyle = "orange";
+            ctx.lineTo(650, 420);
+            ctx.lineTo(670, 410);
+            ctx.lineTo(650, 400);
+            ctx.fill();
+
+            // rays
+            for (let i = 0; i < 360; i += 15) {
+                let rad = (i * Math.PI) / 180;
+                ctx.beginPath();
+                ctx.moveTo(650, 100);
+                ctx.lineTo(650 + Math.cos(rad) * 80, 100 + Math.sin(rad) * 80); // Rays
+                ctx.strokeStyle = "yellow";
+                ctx.stroke();
+            }
+
+            //sun
+            ctx.beginPath();
+            ctx.arc(650, 100, 55, 0, Math.PI * 2);
+            ctx.fillStyle = "white";
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(650, 100, 50, 0, Math.PI * 2);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.stroke();
+
+            // House Base (Rectangle)
+            ctx.fillStyle = "orange";
+            ctx.fillRect(50, 250, 150, 150);
+            ctx.strokeStyle = "blue";
+            ctx.strokeRect(50, 250, 150, 150);
+
+            // Roof (Triangle)
+            ctx.beginPath();
+            ctx.moveTo(50, 250);
+            ctx.lineTo(125, 150);
+            ctx.lineTo(200, 250);
+            ctx.closePath();
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.stroke();
+
+            // Window
+            ctx.fillStyle = "blue";
+            ctx.fillRect(65, 275, 40, 40);
+            ctx.strokeStyle = "Blue";
+            ctx.strokeRect(65, 275, 40, 40);
+            // Door
+            ctx.fillStyle = "Brown";
+            ctx.fillRect(115, 330, 25, 70);
+            ctx.strokeStyle = "Blue";
+            ctx.strokeRect(115, 330, 25, 70);
+
+            // Stones (Multiple small circles)
+            ctx.beginPath();
+            ctx.arc(100, 500, 20, 0, Math.PI * 2);
+            ctx.fillStyle = "gray";
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 1;
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(130, 510, 17, 0, Math.PI * 2);
+            ctx.fillStyle = "gray";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(150, 490, 23, 0, Math.PI * 2);
+            ctx.fillStyle = "gray";
+            ctx.fill();
+            ctx.stroke();
+
+            //Right part
+            ctx.beginPath();
+            ctx.arc(650, 490, 20, 0, Math.PI * 2);
+            ctx.fillStyle = "gray";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(675, 510, 15, 0, Math.PI * 2);
+            ctx.fillStyle = "gray";
+            ctx.fill();
+            ctx.stroke();
+
+            // Stem
+            ctx.beginPath();
+            ctx.fillStyle = "green";
+            ctx.fillRect(705, 310, 10, 80);
+
+            //leaf
+            ctx.ellipse(725, 340, 25, 15, 1, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.ellipse(695, 340, 25, 15, -1, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+
+            //Flowers
+
+            ctx.beginPath();
+            ctx.arc(730, 290, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(720, 270, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(700, 270, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(690, 290, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(700, 310, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(720, 310, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.arc(710, 290, 10, 0, 2 * Math.PI);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.closePath();
+
+            let boatX = 350; // Initial boat position
+            let direction = 1; // 1 for right, -1 for left
+
+            function drawStaticElements() {
+                // Draw Pond (Fixed)
+                ctx.beginPath();
+                ctx.ellipse(400, 300, 150, 100, 0, 0, Math.PI * 2);
+                ctx.fillStyle = "lightblue";
+                ctx.fill();
+                ctx.stroke();
+            }
+
+            function drawBoat() {
+                // Clear only the boat's previous position
+                ctx.clearRect(boatX - 5, 260, 100, 40);
+
+                drawStaticElements();
+                // Draw Boat (Moving)
+                ctx.beginPath();
+                ctx.moveTo(boatX, 270);
+                ctx.lineTo(boatX + 90, 270);
+                ctx.lineTo(boatX + 70, 290);
+                ctx.lineTo(boatX + 20, 290);
+                ctx.closePath();
+                ctx.fillStyle = "brown";
+                ctx.fill();
+                ctx.strokeStyle = "blue";
+                ctx.stroke();
+
+                // Update boat position
+                boatX += direction * 2;
+
+                // Reverse direction if boat reaches pond boundary
+                if (boatX > 450 || boatX < 270) {
+                    direction *= -1;
+                }
+
+                requestAnimationFrame(drawBoat); // Continue animation
+            }
+
+            drawBoat();
+        </script>
+    </body>
+</html>

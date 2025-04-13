@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3-23BCE1087</title>
+</head>
+<body>
+    <form oninput = "x.value=(parseInt(a.value)+parseInt(b.value)+parseInt(c.value))/3">
+        <label for="Quality"><h3>Quality:</h3> </label>
+        1<input type="range" name="Quality" id="a" min = "1" max="5">5
+        <br>
+        <label for="Service"><h3>Service:</h3> </label>
+        1<input type="range" name="Service" id="b" min="1" max="5">5
+        <br>
+        <label for="Perf"><h3>Performance:</h3></label>
+        1<input type="range" name="Perf" id="c" min="1" max="5">5
+        <br>
+        
+        <h3> Overall Rating:<output id = "x" for="a b c" value = "0"> </h3>
+    </form>
+</body>
+</html>

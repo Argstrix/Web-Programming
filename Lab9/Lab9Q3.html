@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23BCE1087</title>
+    <style>
+        body {
+            justify-self: center;
+        }
+        #calculate{
+            justify-self: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <table border="2" style="width: 350px;">
+        <tr>
+        <th colspan="2">
+            BMI Calculator  
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </th>
+        </tr>
+   
+        <tr>
+            <td colspan="2">
+                <strong>Enter Your Weight:</strong><br>
+                (in pounds) <input type="text" id="weight">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <strong>Enter Your Height:</strong><br>
+                (feet) <input type="text" id="feet"><br><br>
+                (inches) <input type="text" id="inches">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" >
+                <center>
+                <button id="calculate" onclick="calculateBMI()">Calculate</button>
+                </center>
+            </td>
+        </tr>
+    <tr >
+        <td>
+            <center>
+            <strong>YOUR</strong><br>
+            <strong>BMI </strong>
+            </center>
+        </td>
+        <td>
+            <center>
+            <div style="width: 200px;border: 2px solid black;height:20px" id="BMI">   
+            </div>
+            </center>
+        </td>
+    </tr>
+    </table>
+    <script src="Lab9Q3.js"></script>
+</body>
+</html>

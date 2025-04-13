@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23BCE1087</title>
+    <style>
+        #f1{
+            width: 300px;
+        }
+        #outputBox{
+            display:flex;
+            margin-top: 10px;
+        }
+        .Boxes{
+            box-shadow: -1px 1px 2px black;
+        }
+    </style>
+    <script src="./Lab8Q6.js"></script>
+</head>
+<body>
+    <form id = "f1">
+        <fieldset>
+            <legend>TicketBooth</legend>
+            <label for = "Adults" style = "font-size: 20    px;">Adults(&#8377 10 each)</label><br>
+            <input type="number" id="Adults" name="Adults" min="0" value = "0" required class="Boxes"><br>
+            <label for = "Children" style = "font-size: 20    px;">Children(&#8377 5 each)</label><br>
+            <input type="number" id="Children" name="Children" min="0" value = "0" required class="Boxes"><br>
+            <div id="outputBox">
+                <button type="button" onclick="updateVal()" style="margin-right:5%" class="Boxes">Total</button>
+                <textarea cols="14" rows = "1" id = "output" readonly></textarea>
+            </div>
+        </fieldset>
+</body>
+</html>
+

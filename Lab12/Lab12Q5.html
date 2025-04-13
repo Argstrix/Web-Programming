@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>23BCE1087</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #f4f4f4;
+            }
+            .container {
+                position: relative;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border: 2px solid black;
+                overflow: hidden;
+            }
+            .box {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                text-align: center;
+                line-height: 150px;
+                font-weight: bold;
+                color: white;
+                border: 2px solid black;
+                cursor: pointer;
+            }
+            #box1 {
+                background: red;
+                top: 50px;
+                left: 50px;
+            }
+            #box2 {
+                background: blue;
+                top: 100px;
+                left: 100px;
+            }
+            #box3 {
+                background: green;
+                top: 150px;
+                left: 150px;
+            }
+            .controls {
+                margin-top: 20px;
+            }
+            .controls button {
+                margin: 5px;
+                padding: 8px 15px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            .z-index-info {
+                margin-top: 10px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Dynamic Z-Index Manipulation</h1>
+
+        <div class="container">
+            <div id="box1" class="box">Box 1</div>
+            <div id="box2" class="box">Box 2</div>
+            <div id="box3" class="box">Box 3</div>
+        </div>
+
+        <div class="controls">
+            <h3>Change Z-Index</h3>
+            <label for="boxSelect">Select Box:</label>
+            <select id="boxSelect">
+                <option value="box1">Box 1</option>
+                <option value="box2">Box 2</option>
+                <option value="box3">Box 3</option>
+            </select>
+            <button onclick="moveUp()">Move Up</button>
+            <button onclick="moveDown()">Move Down</button>
+        </div>
+
+        <div class="z-index-info">
+            <p id="zIndexDisplay"></p>
+        </div>
+
+        <script>
+            // Initialize z-index values
+            let boxes = document.querySelectorAll(".box");
+            let zIndexMap = { box1: 1, box2: 2, box3: 3 };
+
+            function updateZIndexDisplay() {
+                document.getElementById("zIndexDisplay").innerHTML =
+                    "Box 1: z-index " +
+                    zIndexMap["box1"] +
+                    "<br>" +
+                    "Box 2: z-index " +
+                    zIndexMap["box2"] +
+                    "<br>" +
+                    "Box 3: z-index " +
+                    zIndexMap["box3"];
+            }
+
+            function moveUp() {
+                let selectedBox = document.getElementById(
+                    document.getElementById("boxSelect").value
+                );
+                zIndexMap[selectedBox.id] += 1;
+                selectedBox.style.zIndex = zIndexMap[selectedBox.id];
+                updateZIndexDisplay();
+            }
+
+            function moveDown() {
+                let selectedBox = document.getElementById(
+                    document.getElementById("boxSelect").value
+                );
+                if (zIndexMap[selectedBox.id] > 1) {
+                    zIndexMap[selectedBox.id] -= 1;
+                    selectedBox.style.zIndex = zIndexMap[selectedBox.id];
+                    updateZIndexDisplay();
+                }
+            }
+
+            // Set initial z-index styles
+            boxes.forEach((box) => {
+                box.style.zIndex = zIndexMap[box.id];
+            });
+
+            updateZIndexDisplay();
+        </script>
+    </body>
+</html>

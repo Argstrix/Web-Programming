@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>23BCE1087</title>
+        <style>
+            button {
+                min-width: 100px;
+                min-height: 50px;
+                border-radius: 5px;
+                margin: 2px;
+                background-color: rgb(234, 168, 168);
+            }
+            .timer-container {
+                width: 40vh;
+                height: 40vh;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid black;
+                margin: auto;
+                font-size: 24px;
+                margin-bottom: 10px;
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Timer"></div>
+        <br />
+        <div id="CalcAge"></div>
+        <br />
+        <div id="calcWords"></div>
+
+        <script>
+            // (i)
+            let timer;
+            let time = 0;
+            const timerContainer = document.createElement("div");
+            timerContainer.classList.add("timer-container");
+            const display = document.createElement("span");
+            display.textContent = "0";
+            timerContainer.appendChild(display);
+            document.getElementById("Timer").appendChild(timerContainer);
+
+            const buttonContainer = document.createElement("div");
+            buttonContainer.style.textAlign = "center";
+            const startButton = document.createElement("button");
+            startButton.textContent = "Start";
+            const stopButton = document.createElement("button");
+            stopButton.textContent = "Stop";
+            const resetButton = document.createElement("button");
+            resetButton.textContent = "Reset";
+
+            startButton.addEventListener("click", function () {
+                if (!timer) {
+                    timer = setInterval(() => {
+                        time++;
+                        display.textContent = time;
+                    }, 1000);
+                }
+            });
+
+            stopButton.addEventListener("click", function () {
+                clearInterval(timer);
+                timer = null;
+            });
+
+            resetButton.addEventListener("click", function () {
+                clearInterval(timer);
+                timer = null;
+                time = 0;
+                display.textContent = "0";
+            });
+
+            buttonContainer.appendChild(startButton);
+            buttonContainer.appendChild(stopButton);
+            buttonContainer.appendChild(resetButton);
+            document.getElementById("Timer").appendChild(buttonContainer);
+
+            // (ii)
+            const dobInput = document.createElement("input");
+            dobInput.type = "date";
+            dobInput.style.marginRight = "10px";
+            const ageDisplay = document.createElement("input");
+            ageDisplay.type = "text";
+            ageDisplay.readOnly = true;
+            ageDisplay.style.width = "200px";
+            dobInput.addEventListener("mouseover", function () {
+                if (dobInput.value) {
+                    let birthDate = new Date(dobInput.value);
+                    let age =
+                        new Date().getFullYear() - birthDate.getFullYear();
+                    ageDisplay.value = `You are ${age} years old`;
+                }
+            });
+            document.getElementById("CalcAge").appendChild(dobInput);
+            document
+                .getElementById("CalcAge")
+                .appendChild(document.createElement("br"));
+            document
+                .getElementById("CalcAge")
+                .appendChild(document.createElement("br"));
+
+            document.getElementById("CalcAge").appendChild(ageDisplay);
+
+            // (iii)
+            const textarea = document.createElement("textarea");
+            const charCount = document.createElement("span");
+            charCount.textContent = "0 characters";
+            textarea.addEventListener("input", function () {
+                charCount.textContent = `${textarea.value.length} characters`;
+            });
+            document.getElementById("calcWords").appendChild(textarea);
+            document
+                .getElementById("calcWords")
+                .appendChild(document.createElement("br"));
+            document.getElementById("calcWords").appendChild(charCount);
+        </script>
+    </body>
+</html>
